@@ -1,0 +1,17 @@
+#ifndef COMPAT_UNISTD_H
+#define COMPAT_UNISTD_H
+
+#include <io.h>
+#include <process.h>
+
+#ifndef R_OK
+# define R_OK    4
+#endif
+#ifndef W_OK
+# define W_OK    2
+#endif
+#ifndef F_OK
+# define F_OK    0
+#endif
+
+#endif
