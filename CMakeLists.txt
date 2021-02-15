@@ -34,6 +34,14 @@ if(CMAKE_C_COMPILER_ID STREQUAL "Clang")
 						-Wno-switch
 						-fcolor-diagnostics -fansi-escape-codes)
 elseif(CMAKE_C_COMPILER_ID STREQUAL "GNU")
+	add_compile_options(-Wall
+						-Wno-pointer-sign
+						-Wno-unused-result
+						-Wno-unused-but-set-variable
+						-Wno-unused-variable
+						-Wno-int-conversion
+						-Wno-format-zero-length
+						-fdiagnostics-color)
 elseif(CMAKE_C_COMPILER_ID STREQUAL "MSVC")
 	add_compile_options(/wd4311 #-Wno-int-to-void-pointer-cast
 						/wd4312 #-Wno-int-to-void-pointer-cast
