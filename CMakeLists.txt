@@ -9,6 +9,7 @@ cmake_minimum_required(VERSION 3.12)
 project(GnuPG)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake-modules)
+include(UtilityFunctions)
 include(CTest)
 
 option(BUILD_DOCS "Build documentation" ON)
