@@ -1,6 +1,7 @@
-include(CheckCSourceCompiles)
+include_guard(GLOBAL)
+include(UtilityFunctions)
 
-check_c_source_compiles("
+check_compile("Checking whether alloca works" "yes" "no" "
 #ifdef __GNUC__
 # define alloca __builtin_alloca
 #else
@@ -22,11 +23,10 @@ void *alloca (size_t);
 # endif
 #endif
 
-int
-main ()
+int main ()
 {
 	char *p = (char *) alloca (1);
 	if (p) return 0;
-  	return 0;
+	return 0;
 }"
 HAVE_ALLOCA)
